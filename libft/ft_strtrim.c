@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 11:13:35 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/26 15:09:20 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/09/26 17:43:58 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		i;
 
 	start = 0;
-	if (!set[start])
+	if (!set[start] || !s1[start])
 		return (ft_strdup(s1));
-	if (!s1[start] || (!s1[start] && !set[start]))
-		return (ft_strdup(""));
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
+	if (!s1[start])
+		return (ft_strdup(&s1[start]));
 	end = ft_strlen(s1) -1;
 	while (ft_strchr(set, s1[end]))
 		end--;
