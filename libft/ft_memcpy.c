@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 16:43:28 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/21 16:51:01 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/09/26 15:21:57 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	ptr1 = (char *)dst;
 	ptr2 = (char *)src;
+	if (ptr1 == 0 && ptr2 == 0)
+		return (0);
 	if (src == ptr1 || !n)
 		return (ptr1);
 	while (i < n)
