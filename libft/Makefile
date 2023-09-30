@@ -6,7 +6,7 @@
 #    By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 16:30:16 by dcalle-m          #+#    #+#              #
-#    Updated: 2023/09/26 16:33:38 by dcalle-m         ###   ########.fr        #
+#    Updated: 2023/09/29 16:15:40 by dcalle-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,13 @@ SRCS		= ft_memset.c \
 			ft_strjoin.c \
 			ft_strtrim.c \
 			ft_itoa.c \
+			ft_strmapi.c \
+			ft_striteri.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c \
+			ft_split.c \
 				
 OBJS		= $(SRCS:%.c=%.o)
 

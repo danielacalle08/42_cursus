@@ -1,55 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/26 16:32:48 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/27 17:27:46 by dcalle-m         ###   ########.fr       */
+/*   Created: 2023/09/27 18:33:37 by dcalle-m          #+#    #+#             */
+/*   Updated: 2023/09/28 16:06:20 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
-
-	i = 0;
-	if (c <= 0)
-		i = 1;
-	while (c != 0)
-	{
-		i++;
-		c = c / 10;
-	}
-	return (i);
-}
-
-char	*ft_itoa(int n)
-{
+	size_t	i;
 	char	*str;
-	int		size;
-	int		size2;
-	long	num;
 
-	num = n;
-	size = ft_count(num);
-	size2 = size;
-	str = ft_calloc((size2 + 1), sizeof(char));
+	if (!s || !f)
+		return (NULL);
+	str = ft_calloc(ft_strlen(s) + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	if (num < 0)
+	i = 0;
+	while (i < ft_strlen(s))
 	{
-		num = num * (-1);
-		str[0] = '-';
-	}
-	while ((size > 0 && str[0] != '-') || ((str[0] == '-') && size > 1))
-	{
-		str[size - 1] = (num % 10) + 48;
-		num = num / 10;
-		size--;
-	}
+		str[i] = f(i, s[i]);
+		i++;
+	}	
 	return (str);
 }
