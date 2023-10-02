@@ -6,13 +6,13 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 16:32:48 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/27 17:27:46 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/02 14:37:15 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(int c)
+static int	ft_count(int c)
 {
 	int	i;
 
