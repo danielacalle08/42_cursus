@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 16:14:38 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/10/02 16:26:09 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/03 13:29:33 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	ft_count(char const *s, char c)
 	return (j);
 }
 
-char	*ft_free(char **array)
+char	**ft_free(char **array)
 {
 	int	i;
 
