@@ -6,7 +6,7 @@
 #    By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 16:30:16 by dcalle-m          #+#    #+#              #
-#    Updated: 2023/10/03 18:01:54 by dcalle-m         ###   ########.fr        #
+#    Updated: 2023/10/04 16:15:15 by dcalle-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,8 @@ SRC_BONUS = ft_lstnew.c \
 			ft_lstadd_back.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c \
 				
 OBJS		= $(SRCS:%.c=%.o)
 
