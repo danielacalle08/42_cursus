@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 16:32:48 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/10/02 14:37:15 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/05 17:13:35 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,3 +53,11 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+// int	main(void)
+// {
+// 	int	str;
+
+// 	str = -2147483648;
+// 	printf("%s", ft_itoa(str));
+// }

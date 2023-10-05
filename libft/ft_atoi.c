@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:31:09 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/26 16:32:35 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/05 16:57:32 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,11 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+// int	main(void)
+// {
+// 	char	*str;
+
+// 	str = "-2147483648";
+// 	printf("%d", ft_atoi(str));
+// }

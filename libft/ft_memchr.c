@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:18:18 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/18 13:26:49 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/05 17:27:57 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+// int	main(void)
+// {
+// 	char	str[] = "Hola mundo";
+// 	char	*result = (char *)ft_memchr(str, 'm', 7);
+
+// 	if (result != NULL)
+// 		printf("Encontrado: %c\n", *result);
+// 	else
+// 		printf("No encontrado.\n");
+// 	return (0);
+// }
