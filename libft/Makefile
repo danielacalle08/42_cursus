@@ -6,7 +6,7 @@
 #    By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 16:30:16 by dcalle-m          #+#    #+#              #
-#    Updated: 2023/10/05 16:44:33 by dcalle-m         ###   ########.fr        #
+#    Updated: 2023/10/06 16:31:52 by dcalle-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,3 +83,5 @@ bonus:
 	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 	
 clean_bonus: fclean bonus
+
+.PHONY: all bonus re fclean clean
