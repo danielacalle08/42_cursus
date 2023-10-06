@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 11:13:35 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/26 17:43:58 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 16:09:08 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[i] = '\0';
 	return (res);
 }
+
+// int	main(void)
+// {
+// 	char	*s;
+// 	char	*r;
+
+// 	s = "daniela calle meneses";
+// 	r = "dase";
+// 	printf("%s", ft_strtrim(s, r));
+// }

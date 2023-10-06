@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 13:59:08 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/26 10:33:03 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:39:50 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,12 @@ size_t	ft_strlcat(char *dest, char *src, size_t size)
 	dest[j] = '\0';
 	return (dest_len + src_len);
 }
+
+// int	main(void)
+// {
+// 	char	s[30] = "daniela";
+// 	char	*r;
+
+// 	r = "calle";
+// 	printf("%zu, %s", ft_strlcat(s, r, 13), s);
+// }

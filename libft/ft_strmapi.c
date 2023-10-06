@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 18:33:37 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/28 16:06:20 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:49:57 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,19 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}	
 	return (str);
 }
+
+// char	ft_test(unsigned int i, char c)
+// {
+// 	char	s;
+
+// 	s = c + i;
+// 	return (s);
+// }
+
+// int	main(void)
+// {
+// 	char	*s;
+
+// 	s = "daniela";
+// 	printf("%s", ft_strmapi(s, ft_test));
+// }

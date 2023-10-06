@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 12:45:58 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/25 12:59:47 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 13:10:06 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,13 @@ char	*ft_strdup(const char *s1)
 	dup[i] = '\0';
 	return (dup);
 }
+
+// int	main(void)
+// {
+// 	char	*s;
+// 	char	*dup;
+
+// 	s = "danielacalle";
+// 	dup = ft_strdup(s);
+// 	printf("%s", dup);
+// }

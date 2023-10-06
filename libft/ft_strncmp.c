@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 12:53:26 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/19 12:25:12 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:42:29 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		i++;
 	return ((str1[i] - str2[i]));
 }
+
+// int	main(void)
+// {
+// 	char	*s;
+// 	char	*r;
+
+// 	s = "daniela";
+// 	r = "danidla";
+// 	printf("%d", ft_strncmp(s, r, 6));
+// }

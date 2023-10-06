@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:57:12 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/19 12:26:03 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 12:48:41 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,14 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+
+// int	main(void)
+// {
+// 	char	*s1;
+// 	char	*s2;
+
+// 	s1 = "daniala";
+// 	s2 = "daniela";
+// 	printf("%d", ft_memcmp(s1, s2, 7));
+// 	return (0);
+// }

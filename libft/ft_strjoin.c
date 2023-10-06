@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:17:17 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/09/26 11:12:41 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/06 15:34:55 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	*res2 = '\0';
 	return (res);
 }
+
+// int	main(void)
+// {
+// 	char	*s;
+// 	char	*r;
+
+// 	s = "daniela";
+// 	r = "calle";
+// 	printf("%s", ft_strjoin(s, r));
+// 	return (0);
+// }
