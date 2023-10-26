@@ -1,27 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 11:43:10 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/10/26 12:01:01 by dcalle-m         ###   ########.fr       */
+/*   Created: 2023/10/26 15:23:05 by dcalle-m          #+#    #+#             */
+/*   Updated: 2023/10/26 15:23:17 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <stdarg.h>
-
-int		ft_printf(char const *str, ...);
-int		ft_putchar(char c);
-int		ft_putnbr(int nb);
-int		ft_putstr(char *str);
-int		ft_puthex(size_t num, char c);
-
-#endif
