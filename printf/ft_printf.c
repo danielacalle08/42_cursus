@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danielacallemeneses <danielacallemenese    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:40:23 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/10/26 15:24:06 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/29 20:58:04 by danielacall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ static int	ft_get_format(va_list list, char str, int len)
 		len += ft_putnbr(va_arg(list, int));
 	if (str == 'x' || str == 'X')
 		len += ft_puthex(va_arg(list, int), str);
+  if (str == 'p')
+    len += ft_pointer(va_arg(list, int), str);
 	return (len);
 }
 
@@ -51,8 +53,9 @@ int	ft_printf(char const *str, ...)
 
 // int	main(void)
 // {
-// 	int	i;
+//   int number = 42;
+//   int *ptr = &number;
 
-// 	i = 255;
-// 	ft_printf("%x", i);
+// 	ft_printf("%p\n", (void *)ptr);
+//   printf("%p", (void *)ptr);
 // }

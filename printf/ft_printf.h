@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: danielacallemeneses <danielacallemenese    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:43:10 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/10/26 12:01:01 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/10/29 20:46:00 by danielacall      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ int		ft_putchar(char c);
 int		ft_putnbr(int nb);
 int		ft_putstr(char *str);
 int		ft_puthex(size_t num, char c);
+int	ft_pointer(size_t num, char c);
 
 #endif
