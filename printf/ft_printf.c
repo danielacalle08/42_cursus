@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:40:23 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/11/01 17:00:44 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2023/11/01 19:06:42 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,28 @@ int	ft_printf(char const *str, ...)
 	return (len);
 }
 
-// int	main(void)
-// {
-// 	long	number = __LONG_MAX__;
+int	main(void)
+{
+	int		number = 0;
+	int		*ptr = NULL;
 
-// 	ft_printf("%x\n", number);
-// }
+	ft_printf("%x\n", number);
+	ft_printf("%X estas\n", number);
+	ft_printf("%d\n", number);
+	ft_printf("%i", number);
+	ft_printf("%u", number);
+	ft_printf("%s\n", "");
+	ft_printf("%c\n", 'd');
+	ft_printf("%%\n");
+	ft_printf("%p\n", (void *)ptr);
+	printf("----\n");
+	printf("%x\n", number);
+	printf("%X\n", number);
+	printf("%d\n", number);
+	printf("%i\n", number);
+	printf("%u\n", number);
+	printf("%s\n", "");
+	printf("%c\n", 'd');
+	printf("%%\n");
+	printf("%p\n", (void *)ptr);
+}
