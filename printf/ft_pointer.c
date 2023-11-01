@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielacallemeneses <danielacallemenese    +#+  +:+       +#+        */
+/*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:23:05 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/10/29 20:47:55 by danielacall      ###   ########.fr       */
+/*   Updated: 2023/11/01 16:22:29 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_pointer(size_t num, char c)
+size_t	ft_pointer(size_t num, char c)
 {
 	int	len;
 
@@ -20,7 +20,7 @@ int	ft_pointer(size_t num, char c)
 	if (c == 'p')
 	{
 		len += ft_putstr("0x");
-		len += ft_puthex(num, 'x');
+		len += ft_puthex_min(num, 'x');
 	}
 	return (len);
 }

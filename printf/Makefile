@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: danielacallemeneses <danielacallemenese    +#+  +:+       +#+         #
+#    By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/18 18:00:02 by dcalle-m          #+#    #+#              #
-#    Updated: 2023/10/29 20:46:14 by danielacall      ###   ########.fr        #
+#    Updated: 2023/10/31 10:48:44 by dcalle-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ SRCS = ft_putchar.c \
 			ft_printf.c \
 			ft_puthex.c \
 			ft_pointer.c \
+			ft_putunbr.c \
 
 OBJS = $(SRCS:%.c=%.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: danielacallemeneses <danielacallemenese    +#+  +:+       +#+        */
+/*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:40:23 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/10/29 20:58:04 by danielacall      ###   ########.fr       */
+/*   Updated: 2023/11/01 17:00:44 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,14 @@ static int	ft_get_format(va_list list, char str, int len)
 		len += ft_putstr(va_arg(list, char *));
 	if (str == 'd' || str == 'i')
 		len += ft_putnbr(va_arg(list, int));
-	if (str == 'x' || str == 'X')
-		len += ft_puthex(va_arg(list, int), str);
-  if (str == 'p')
-    len += ft_pointer(va_arg(list, int), str);
+	if (str == 'x')
+		len += ft_puthex_min(va_arg(list, unsigned int), str);
+	if (str == 'X')
+		len += ft_puthex_may(va_arg(list, unsigned int), str);
+	if (str == 'p')
+		len += ft_pointer(va_arg(list, size_t), str);
+	if (str == 'u')
+		len += ft_putunbr(va_arg(list, int));
 	return (len);
 }
 
@@ -53,9 +57,7 @@ int	ft_printf(char const *str, ...)
 
 // int	main(void)
 // {
-//   int number = 42;
-//   int *ptr = &number;
+// 	long	number = __LONG_MAX__;
 
-// 	ft_printf("%p\n", (void *)ptr);
-//   printf("%p", (void *)ptr);
+// 	ft_printf("%x\n", number);
 // }
