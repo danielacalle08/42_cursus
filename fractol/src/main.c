@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minitalk.h                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 16:12:01 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/02/01 13:42:55 by dcalle-m         ###   ########.fr       */
+/*   Created: 2024/02/27 17:49:42 by dcalle-m          #+#    #+#             */
+/*   Updated: 2024/02/27 20:48:22 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINITALK_H
-# define MINITALK_H
+#include "fractol.h"
 
-# include <signal.h>
-# include "printf/ft_printf.h"
+int	main(int argc, char **argv)
+{
+	t_fractal	fractal;
 
-int	ft_isdigit(int str);
-int	ft_atoi(const char *str);
-
-#endif
+	if (argc == 2 && (ft_strncmp(argv[1], "mandelbrot", 10) == 0)
+		|| argc == 4 && (ft_strncmp(argv[1], "julia", 5) == 0))
+	{
+		fractal.name = argv[1];
+		fractal_init(&fractal);
+		//fractal_render(&fractal);
+		mlx_loop(fractal.mlx_connection);
+	}
+	else
+	{
+		ft_putstr_fd(ERROR_MESSAGE, STDERR_FILENO);
+		exit(EXIT_FAILURE);
+	}
+}

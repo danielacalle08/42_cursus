@@ -1,2 +1,2 @@
-ARCHIVO 1: hola, get nex line  
+ARCHIVO 1: hola, get next line  
 ARCHIVO 1: segunda linea

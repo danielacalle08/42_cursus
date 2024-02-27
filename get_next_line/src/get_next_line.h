@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 16:48:28 by dcalle-m          #+#    #+#             */
-/*   Updated: 2023/12/05 13:34:45 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/02/24 13:13:51 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE	50
+#  define BUFFER_SIZE 32
 # endif
 
 void	ft_free(void *ptr);

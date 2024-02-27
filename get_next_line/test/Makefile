@@ -6,14 +6,14 @@
 #    By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/05 10:46:25 by dcalle-m          #+#    #+#              #
-#    Updated: 2023/12/05 13:49:44 by dcalle-m         ###   ########.fr        #
+#    Updated: 2024/02/24 12:57:50 by dcalle-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 all: get_next_line
 
 get_next_line: src/get_next_line.c src/get_next_line_utils.c src/get_next_line.h main.c
-	gcc -Wall -Werror -Wextra -o get_next_line src/get_next_line.c src/get_next_line_utils.c main.c -Isrc/ -D BUFFER_SIZE=1
+	gcc -Wall -Werror -Wextra -o get_next_line ../src/get_next_line.c ../src/get_next_line_utils.c main.c -Isrc/ -D BUFFER_SIZE=1
 
 bonus: src/get_next_line_bonus.c src/get_next_line_utils_bonus.c src/get_next_line_bonus.h main_bonus.c
 	gcc -Wall -Werror -Wextra -o get_next_line src/get_next_line_bonus.c src/get_next_line_utils_bonus.c main_bonus.c -Isrc/ -D BUFFER_SIZE=1

@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 16:13:49 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/01/25 16:30:48 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/01/31 14:04:02 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_message(int pid, char c)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		usleep(200);
+		usleep(500);
 		bit++;
 	}
 }
@@ -42,6 +42,7 @@ int	main(int argc, char **argv)
 			ft_message(pid, argv[2][i]);
 			i++;
 		}
+		ft_message(pid, '\n');
 	}
 	else if (argc < 3)
 	{
