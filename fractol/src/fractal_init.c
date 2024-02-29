@@ -6,11 +6,17 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 20:03:31 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/02/27 20:46:44 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/02/29 17:44:43 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+void	data_init(t_fractal *fractal)
+{
+	fractal->escape_value = 4;
+	fractal->iterations = 40;
+}
 
 static void	malloc_error(void)
 {
@@ -43,4 +49,5 @@ void	fractal_init(t_fractal *fractal)
 			&fractal->img.bits_per_pixels,
 			&fractal->img.size_line,
 			&fractal->img.endian);
+	data_init(fractal);
 }
