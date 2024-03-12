@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:49:42 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/02/29 17:16:39 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/03/12 18:11:28 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,15 @@ int	main(int argc, char **argv)
 {
 	t_fractal	fractal;
 
-	if (argc == 2 && (ft_strncmp(argv[1], "mandelbrot", 10) == 0)
-		|| argc == 4 && (ft_strncmp(argv[1], "julia", 5) == 0))
+	if ((argc == 2 && (ft_strncmp(argv[1], "mandelbrot", 10) == 0))
+		|| (argc == 4 && (ft_strncmp(argv[1], "julia", 5) == 0)))
 	{
 		fractal.name = argv[1];
+		if (ft_strncmp(fractal.name, "julia", 5) == 0)
+		{
+			fractal.julia_x = atoi_double(argv[2]);
+			fractal.julia_y = atoi_double(argv[3]);
+		}
 		fractal_init(&fractal);
 		fractal_render(&fractal);
 		mlx_loop(fractal.mlx_connection);

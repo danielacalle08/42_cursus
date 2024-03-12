@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 18:19:23 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/02/27 19:20:18 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/03/12 18:15:24 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,32 @@ void	ft_putstr_fd(char *s, int fd)
 		write(fd, s, 1);
 		ft_putstr_fd(s + 1, fd);
 	}
+}
+
+int	atoi_double(char *str)
+{
+	long	integer;
+	double	decimal;
+	double	exp;
+	int		sign;
+
+	integer = 0;
+	decimal = 0;
+	sign = 1;
+	exp = 1;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	while (*str == '+' || *str == '-')
+		if (*str == '-')
+			sign = -1;
+	while (*str != '.' && *str)
+		integer = (integer * 10) + (*str++ - '0');
+	if (*str == '.')
+		str++;
+	while (*str)
+	{
+		exp /= 10;
+		decimal += (*str++ - '0') * exp;
+	}
+	return ((integer + decimal) * sign);
 }
