@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 20:03:31 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/12 17:04:22 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/03/19 15:15:07 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ static void	event_init(t_fractal *fractal)
 	mlx_key_hook(fractal->mlx_window, key_handler, fractal);
 	mlx_mouse_hook(fractal->mlx_window, mouse_handler, fractal);
 	mlx_hook(fractal->mlx_window, CLOSE_X, 0, close_window, fractal);
+	mlx_hook(fractal->mlx_window, ON_MOUSE_MOVE, 0, mouse_move, fractal);
 }
 
 static void	malloc_error(void)

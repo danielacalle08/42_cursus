@@ -6,11 +6,21 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 18:19:23 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/12 18:15:24 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/03/19 15:16:08 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../src/fractol.h"
+
+int	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -39,7 +49,7 @@ void	ft_putstr_fd(char *s, int fd)
 	}
 }
 
-int	atoi_double(char *str)
+double	atoi_double(char *str)
 {
 	long	integer;
 	double	decimal;
@@ -52,8 +62,8 @@ int	atoi_double(char *str)
 	exp = 1;
 	while ((*str >= 9 && *str <= 13) || *str == 32)
 		str++;
-	while (*str == '+' || *str == '-')
-		if (*str == '-')
+	while (*str == '-' || *str == '+')
+		if (*(str++) == '-')
 			sign = -1;
 	while (*str != '.' && *str)
 		integer = (integer * 10) + (*str++ - '0');

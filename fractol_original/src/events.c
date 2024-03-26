@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 20:44:21 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/12 17:26:25 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/03/19 15:22:51 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,18 @@ int	mouse_handler(int btn, int x, int y, t_fractal *fractal)
 	else if (btn == ZOOM_OUT)
 		fractal->zoom *= 1.05;
 	fractal_render(fractal);
+	return (0);
+}
+
+int	mouse_move(int x, int y, t_fractal *fractal)
+{
+	if (ft_strncmp(fractal->name, "julia", 5) == 0)
+	{
+		fractal->julia_x = (scale(x, WIDTH, -2, 2) * fractal->zoom) \
+		+ fractal->shift_x;
+		fractal->julia_y = (scale(y, HEIGHT, -2, 2) * fractal->zoom) \
+		+ fractal->shift_y;
+		fractal_render(fractal);
+	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:44:28 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/12 18:01:29 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/03/19 16:00:29 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@
 # include <stdlib.h>
 # include <math.h>
 
-# define ERROR_MESSAGE "Error: Wrong input\n"
+# define ERROR_MESSAGE "ERROR \nPara ejecutar el proyecto debes utilizar:\n\
+- './fractol mandelbrot' para el conjunto de Mandelbrot.\n\
+- './fractol julia [coordenada_X] [coordenada_Y]' para el conjunto de Julia, \
+con las coordenadas especificadas.\n"
 # define WIDTH 864
 # define HEIGHT 684
 # define CLOSE_X 17
@@ -34,6 +37,7 @@
 # define DOWN 125
 # define ZOOM_IN 4
 # define ZOOM_OUT 5
+# define ON_MOUSE_MOVE 6
 # define WHITE 0xFFFFFF
 # define BLACK 0x000000
 # define RED   0xFF0000
@@ -74,8 +78,8 @@ typedef struct s_fractal
 	double	shift_x;
 	double	shift_y;
 	double	zoom;
-	double 	julia_x;
-	double 	julia_y;
+	double	julia_x;
+	double	julia_y;
 }				t_fractal;
 
 typedef struct s_complex
@@ -85,24 +89,27 @@ typedef struct s_complex
 }				t_complex;
 
 // **String utils**
-void	ft_putstr_fd(char *s, int fd);
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		atoi_double(char *str);
+void		ft_putstr_fd(char *s, int fd);
+int			ft_strncmp(const char *s1, const char *s2, size_t n);
+double		atoi_double(char *str);
+int			ft_strlen(const char *s);
 
 // **Init**
-void	fractal_init(t_fractal *fractal);
+void		fractal_init(t_fractal *fractal);
 
 // **Render**
-void	fractal_render(t_fractal *fractal);
+void		fractal_render(t_fractal *fractal);
 
 // **Math utils**
 t_complex	sum_complex(t_complex z1, t_complex z2);
 t_complex	square_complex(t_complex z);
-double	scale(double unscaled, double old_max, double new_min, double new_max);
+double		scale(double unscaled, double old_max, \
+double new_min, double new_max);
 
 // **Events**
-int	close_window(t_fractal *fractal);
-int	key_handler(int keycode, t_fractal *fractal);
-int	mouse_handler(int btn, int x, int y, t_fractal *fractal);
+int			close_window(t_fractal *fractal);
+int			key_handler(int keycode, t_fractal *fractal);
+int			mouse_handler(int btn, int x, int y, t_fractal *fractal);
+int			mouse_move(int x, int y, t_fractal *fractal);
 
 #endif
