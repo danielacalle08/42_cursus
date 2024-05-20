@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 18:00:11 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/05/20 18:54:55 by dcalle-m         ###   ########.fr       */
+/*   Created: 2023/09/15 12:14:45 by dcalle-m          #+#    #+#             */
+/*   Updated: 2023/10/05 17:10:36 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+int	ft_isalnum(int c)
 {
-	if (argc == 1)
+	if (ft_isalpha(c) || ft_isdigit(c))
+	{
+		return (1);
+	}
+	else
 		return (0);
-	t_list	*stack;
-	ft_stack_init(&stack, argv + 1);
-	printf("antes\n");
-	ft_print_stack(stack);
-	ft_swap_nbr(&stack);
-	printf("despues\n");
-	ft_print_stack(stack);
 }
+
+// int	main(void)
+// {
+// 	int	i;
+// 	int	x;
+// 	int	s;
+
+// 	i = '*';
+// 	x = '1';
+// 	s = 'd';
+// 	printf("%d\n", ft_isalnum(i));
+// 	printf("%d\n", ft_isalnum(x));
+// 	printf("%d\n", ft_isalnum(s));
+// }

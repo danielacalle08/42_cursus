@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 18:00:11 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/05/20 18:54:55 by dcalle-m         ###   ########.fr       */
+/*   Created: 2023/10/04 16:15:47 by dcalle-m          #+#    #+#             */
+/*   Updated: 2023/10/04 17:51:23 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	if (argc == 1)
-		return (0);
-	t_list	*stack;
-	ft_stack_init(&stack, argv + 1);
-	printf("antes\n");
-	ft_print_stack(stack);
-	ft_swap_nbr(&stack);
-	printf("despues\n");
-	ft_print_stack(stack);
+	t_list	*p;
+	t_list	*s;
+	void	*content;
+
+	p = NULL;
+	if (!lst || !f || !del)
+		return (NULL);
+	while (lst)
+	{
+		content = f(lst->content);
+		s = ft_lstnew(content);
+		if (!s)
+		{
+			del(content);
+			ft_lstclear(&p, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&p, s);
+		lst = lst->next;
+	}
+	return (p);
 }

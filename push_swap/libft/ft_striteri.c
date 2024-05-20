@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 18:00:11 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/05/20 18:54:55 by dcalle-m         ###   ########.fr       */
+/*   Created: 2023/09/28 12:35:57 by dcalle-m          #+#    #+#             */
+/*   Updated: 2023/10/06 16:18:00 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (argc == 1)
-		return (0);
-	t_list	*stack;
-	ft_stack_init(&stack, argv + 1);
-	printf("antes\n");
-	ft_print_stack(stack);
-	ft_swap_nbr(&stack);
-	printf("despues\n");
-	ft_print_stack(stack);
+	int		i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (i < (int)ft_strlen(s))
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
+
+void	ft_test2(unsigned int i, char *s)
+{
+	*s = *s + i;
+}
+
+// int	main(void)
+// {
+// 	char	s[50] = "daniela";
+
+// 	ft_striteri(s, ft_test2);
+// 	printf("%s", s);
+// }

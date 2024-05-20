@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 18:00:11 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/05/20 18:54:55 by dcalle-m         ###   ########.fr       */
+/*   Created: 2023/09/12 16:17:29 by dcalle-m          #+#    #+#             */
+/*   Updated: 2023/10/05 16:59:08 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+void	ft_bzero(void *s, size_t n)
 {
-	if (argc == 1)
-		return (0);
-	t_list	*stack;
-	ft_stack_init(&stack, argv + 1);
-	printf("antes\n");
-	ft_print_stack(stack);
-	ft_swap_nbr(&stack);
-	printf("despues\n");
-	ft_print_stack(stack);
+	unsigned int	i;
+	unsigned char	*ptr;
+
+	i = 0;
+	ptr = (unsigned char *)s;
+	while (i < n)
+	{
+		ptr[i] = '\0';
+		i++;
+	}
 }
+
+// int	main(void)
+// {
+// 	char s[40] = "daniela";
+
+// 	printf("antes %s\n", s);
+// 	ft_bzero(s, 3);
+// 	printf("antes%s", s);
+// 	return (0);
+// }

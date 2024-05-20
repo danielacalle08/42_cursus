@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 18:00:11 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/05/20 18:54:55 by dcalle-m         ###   ########.fr       */
+/*   Created: 2023/09/12 15:18:00 by dcalle-m          #+#    #+#             */
+/*   Updated: 2023/09/14 16:36:34 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if (argc == 1)
-		return (0);
-	t_list	*stack;
-	ft_stack_init(&stack, argv + 1);
-	printf("antes\n");
-	ft_print_stack(stack);
-	ft_swap_nbr(&stack);
-	printf("despues\n");
-	ft_print_stack(stack);
+	unsigned int	i;
+	unsigned char	*ptr;
+
+	i = 0;
+	ptr = (unsigned char *)b;
+	while (i < len)
+	{
+		ptr[i] = c;
+		i++;
+	}
+	return (b);
 }
+
+// int	main(void)
+// {
+// 	char	str[40] = "Daniela";
+
+// 	printf("antes %s\n", str);
+// 	ft_memset(str, 'n', 3);
+// 	printf("%s", str);
+// 	return (0);
+// }

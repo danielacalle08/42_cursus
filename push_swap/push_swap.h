@@ -24,14 +24,14 @@ typedef struct s_list
 	struct s_list	*prev;
 }				t_list;
 
-int		ft_stack_size(t_list *stack);
-t_list	*ft_stack_last(t_list *stack);
-int		ft_isdigit(int str);
-int		ft_atoi_long(const char *str);
-int		ft_repeated_nbr(t_list *stack, int nbr);
-void	ft_free(t_list **stack);
-int	ft_stack_init(t_list **stack, char **argv);
-void	ft_print_stack(t_list *stack);
-void	ft_swap_nbr(t_list **stack);
+int			ft_stack_size(t_list *stack);
+t_list		*ft_stack_last(t_list *stack);
+int			ft_isdigit(int str);
+int			ft_atoi_long(const char *str);
+int			ft_repeated_nbr(t_list *stack, int nbr);
+void		ft_free(t_list **stack);
+int			ft_stack_init(t_list **stack, char **argv);
+void		ft_print_stack(t_list *stack);
+void		ft_swap_nbr(t_list **stack);
 
 #endif
