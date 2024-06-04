@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap_a.c                                           :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 17:28:00 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/05/20 18:58:16 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/05/27 16:51:55 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_swap_nbr(t_list **stack)
+void	ft_swap_nbr(t_pile **stack)
 {
-	t_list	*first;
-	t_list	*second;
+	t_pile	*first;
+	t_pile	*second;
 
 	if (ft_stack_size(*stack) < 2)
 		return ;
@@ -28,19 +28,19 @@ void	ft_swap_nbr(t_list **stack)
 	first->prev = second;
 }
 
-void	swap_a(t_list **stack)
+void	swap_a(t_pile **stack)
 {
 	ft_swap_nbr(stack);
 	printf("sa\n");
 }
 
-void	swap_b(t_list **stack)
+void	swap_b(t_pile **stack)
 {
 	ft_swap_nbr(stack);
 	printf("sb\n");
 }
 
-void	swap_ss(t_list **stack)
+void	swap_ss(t_pile **stack)
 {
 	ft_swap_nbr(stack);
 	printf("ss\n");

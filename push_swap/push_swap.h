@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:30:01 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/26 18:25:06 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:32:16 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,24 @@
 # include <stdlib.h>
 # include <limits.h>
 
-typedef struct s_list
+typedef struct s_pile
 {
 	int				value;
-	struct s_list	*next;	
-	struct s_list	*prev;
-}				t_list;
+	struct s_pile	*next;	
+	struct s_pile	*prev;
+}				t_pile;
 
-int			ft_stack_size(t_list *stack);
-t_list		*ft_stack_last(t_list *stack);
+int			ft_stack_size(t_pile *stack);
+t_pile		*ft_stack_last(t_pile *stack);
 int			ft_isdigit(int str);
 int			ft_atoi_long(const char *str);
-int			ft_repeated_nbr(t_list *stack, int nbr);
-void		ft_free(t_list **stack);
-int			ft_stack_init(t_list **stack, char **argv);
-void		ft_print_stack(t_list *stack);
-void		ft_swap_nbr(t_list **stack);
+int			ft_repeated_nbr(t_pile *stack, int nbr);
+void		ft_free(t_pile **stack);
+int			ft_stack_init(t_pile **stack, char **argv);
+void		ft_print_stack(t_pile *stack);
+void	    ft_reverse_rotate_pile(t_pile **pile);
+void		ft_swap_nbr(t_pile **stack);
+void    	ft_push_pile(t_pile **src_pile, t_pile **dst_pile);
+void		ft_rotate_pile(t_pile **pile);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/20 18:33:11 by dcalle-m          #+#    #+#              #
-#    Updated: 2024/05/20 18:59:45 by dcalle-m         ###   ########.fr        #
+#    Updated: 2024/05/27 18:33:07 by dcalle-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CFLAGS = -Wall -Wextra -Werror -g
 NAME = push_swap
 
 SRCS1 = main.c
-SRCS2 = list_utils.c nbr_utils.c stack_init.c swap.c error.c
+SRCS2 = list_utils.c nbr_utils.c stack_init.c swap.c error.c push.c reverse_rotate.c rotate.c
 OBJS1 = $(SRCS1:.c=.o)
 OBJS2 = $(SRCS2:.c=.o)
 HEADER = push_swap.h

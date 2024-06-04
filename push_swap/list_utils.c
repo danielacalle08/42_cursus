@@ -6,13 +6,13 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:40:24 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/26 18:04:30 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/05/27 16:51:15 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_stack_size(t_list *stack)
+int	ft_stack_size(t_pile *stack)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ int	ft_stack_size(t_list *stack)
 	return (i);
 }
 
-t_list	*ft_stack_last(t_list *stack)
+t_pile	*ft_stack_last(t_pile *stack)
 {
 	if (!stack)
 		return (NULL);
@@ -34,7 +34,7 @@ t_list	*ft_stack_last(t_list *stack)
 	return (stack);
 }
 
-void	ft_print_stack(t_list *stack)
+void	ft_print_stack(t_pile *stack)
 {
 	while (stack)
 	{

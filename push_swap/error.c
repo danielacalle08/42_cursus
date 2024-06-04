@@ -6,13 +6,13 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 17:00:49 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/26 18:11:21 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/05/27 16:51:02 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_repeated_nbr(t_list *stack, int nbr)
+int	ft_repeated_nbr(t_pile *stack, int nbr)
 {
 	if (stack == NULL)
 		return (0);
@@ -25,10 +25,10 @@ int	ft_repeated_nbr(t_list *stack, int nbr)
 	return (0);
 }
 
-void	ft_free(t_list **stack)
+void	ft_free(t_pile **stack)
 {
-	t_list	*tmp;
-	t_list	*node;
+	t_pile	*tmp;
+	t_pile	*node;
 
 	if (stack == NULL)
 		return ;

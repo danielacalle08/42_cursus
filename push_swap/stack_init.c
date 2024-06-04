@@ -6,20 +6,20 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:47:19 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/26 18:07:33 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/05/27 16:51:46 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_add_nbr(t_list **stack, int n)
+void	ft_add_nbr(t_pile **stack, int n)
 {
-	t_list	*new;
-	t_list	*last;
+	t_pile	*new;
+	t_pile	*last;
 
 	if (stack == NULL)
 		return ;
-	new = malloc(sizeof(t_list));
+	new = malloc(sizeof(t_pile));
 	if (new == NULL)
 		return ;
 	if (*stack == NULL)
@@ -37,7 +37,7 @@ void	ft_add_nbr(t_list **stack, int n)
 	new->next = NULL;
 }
 
-int	ft_stack_init(t_list **stack, char **argv)
+int	ft_stack_init(t_pile **stack, char **argv)
 {
 	int		i;
 	long	n;
