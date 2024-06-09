@@ -25,7 +25,20 @@ int	ft_repeated_nbr(t_pile *stack, int nbr)
 	return (0);
 }
 
-void	ft_free(t_pile **stack)
+int	ft_stack_sorted(t_pile *stack)
+{
+	if (!stack)
+		return (-1);
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
+
+void	ft_free_pile_pile(t_pile **stack)
 {
 	t_pile	*tmp;
 	t_pile	*node;

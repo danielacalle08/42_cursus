@@ -42,3 +42,42 @@ void	ft_print_stack(t_pile *stack)
 		stack = stack->next;
 	}
 }
+
+void	update_target(t_pile *a, t_pile *b)
+{
+	while (a)
+	{
+		a->target = find_max(b, a->value);
+		if (a->target == NULL)
+			a->target = find_max(b, INT_MAX);
+		a = a->next;
+	}
+}
+
+void	update_index_updown(t_pile *lst)
+{
+	int	i;
+	int	half;
+	int	size;
+
+	size = ft_stack_size(lst);
+	half = (size / 2);
+	i = 0;
+	while (lst)
+	{
+		lst->index = i;
+		if (i > half)
+			lst->updown = -1;
+		else if (i == half)
+		{
+			if (size % 2 == 0)
+				lst->updown = -1;
+			else
+				lst->updown = 1;
+		}
+		else if (i < half)
+			lst->updown = 1;
+		i++;
+		lst = lst->next;
+	}
+}

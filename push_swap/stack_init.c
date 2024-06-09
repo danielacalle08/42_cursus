@@ -51,7 +51,7 @@ int	ft_stack_init(t_pile **stack, char **argv)
 		{
 			printf("Error\n");
 			if (stack && *stack)
-				ft_free(stack);
+				ft_free_pile(stack);
 			return (1);
 		}
 		ft_add_nbr(stack, n);

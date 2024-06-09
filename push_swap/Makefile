@@ -14,10 +14,22 @@ CFLAGS = -Wall -Wextra -Werror -g
 
 NAME = push_swap
 
-SRCS1 = main.c
-SRCS2 = list_utils.c nbr_utils.c stack_init.c swap.c error.c push.c reverse_rotate.c rotate.c
-OBJS1 = $(SRCS1:.c=.o)
-OBJS2 = $(SRCS2:.c=.o)
+SRCS = 	algorithm_utils.c \
+		algorithm_utils2.c \
+		error_utils.c \
+		list_utils.c \
+		main.c \
+		nbr_utils.c \
+		pile_utils.c \
+		push.c \
+		reverse_rotate.c \
+		rotate.c \
+		sorting_pile.c \
+		stack_init.c \
+		swap.c \
+
+
+OBJS = $(SRCS:.c=.o)
 HEADER = push_swap.h
 
 LIBS = libft/libft.a 
@@ -27,15 +39,15 @@ all: libs $(NAME)
 libs:
 	@make -C libft
 
-$(NAME): $(OBJS1) $(OBJS2)
-	gcc $(CFLAGS) $(OBJS1) $(OBJS2) $(LIBS) -o $(NAME)
+$(NAME): $(OBJS)
+	gcc $(CFLAGS) $(OBJS) $(LIBS) -o $(NAME)
 
 %.o: %.c
 	gcc $(CFLAGS) -c -o $@ $<
 
 clean:
 	@make clean -C libft
-	rm -f $(OBJS1) $(OBJS2)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME) $(LIBS)

@@ -31,7 +31,7 @@ static int	ft_count(char const *s, char c)
 	return (j);
 }
 
-char	**ft_free(char **array)
+char	**ft_free_pile(char **array)
 {
 	int	i;
 
@@ -63,7 +63,7 @@ static char	**ft_fill(char const *s, char c, char **array)
 			end++;
 		array[i] = ft_substr(s, start, (end - start));
 		if (!array[i])
-			return (ft_free(array));
+			return (ft_free_pile(array));
 		i++;
 	}
 	array[i] = NULL;

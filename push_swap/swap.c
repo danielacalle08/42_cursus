@@ -28,19 +28,19 @@ void	ft_swap_nbr(t_pile **stack)
 	first->prev = second;
 }
 
-void	swap_a(t_pile **stack)
+void	sa(t_pile **stack)
 {
 	ft_swap_nbr(stack);
 	printf("sa\n");
 }
 
-void	swap_b(t_pile **stack)
+void	sb(t_pile **stack)
 {
 	ft_swap_nbr(stack);
 	printf("sb\n");
 }
 
-void	swap_ss(t_pile **stack)
+void	ss(t_pile **stack)
 {
 	ft_swap_nbr(stack);
 	printf("ss\n");
