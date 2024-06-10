@@ -29,7 +29,8 @@ void	handle_opposite_rotation(t_pile **a, t_pile **b, t_pile *cheapest)
 			ra(a);
 		while (aux_b -- > 0)
 			rrb(b);
-		pb(b, a);
+		//write(1, "ALLÁ PUTO\n", 11);
+		pb(a, b); //MOD 3
 	}
 	else if (cheapest->updown == -1 && cheapest->target->updown == 1)
 	{

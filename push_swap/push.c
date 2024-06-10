@@ -41,4 +41,15 @@ void    pb(t_pile **a, t_pile **b)
 {
     ft_push_pile(a, b);
     printf("pb\n");
+    int idx = -1;
+    // IMPRIMIR STACK A
+    /*
+    while ()
+    {
+        printf("");
+    }
+    
+
+    */
+
 }

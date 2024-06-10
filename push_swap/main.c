@@ -32,5 +32,7 @@ int	main(int argc, char **argv)
 	{
 		start_sorting(&a, &b);
 	}
+	write(1, "FINAL\n", 6);
+	ft_print_stack(a);
 	ft_free_pile(&a);
 }

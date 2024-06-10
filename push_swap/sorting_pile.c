@@ -20,6 +20,7 @@ void	sort_pile(t_pile **a, t_pile **b)
 	len = ft_stack_size(*a);
 	while (len > 0)
 	{
+		printf("STACK A: %i\nSTACK B: %i\n", ft_stack_size(*a), ft_stack_size(*b));
 		cheapest = get_cheapest(*a);
 		if (cheapest != NULL)
 		{
@@ -29,7 +30,7 @@ void	sort_pile(t_pile **a, t_pile **b)
 			}
 			else if (cheapest->updown != cheapest->target->updown)
 			{
-				handle_rotation_case(a, b, cheapest);
+				handle_opposite_rotation(a, b, cheapest);
 			}
 		}
 		update_piles(a, b);
@@ -39,12 +40,11 @@ void	sort_pile(t_pile **a, t_pile **b)
 
 void	sort_and_return(t_pile **a, t_pile **b)
 {
-	pb(b, a);
-	pb(b, a);
+	pb(a, b);
+	pb(a, b);
 	if ((*b) && (*b)->value < (*b)->next->value)
 		sb(b);
 	update_piles(a, b);
-	write(1, "SORT\n", 5);
 	sort_pile(a, b);
 	return_b_to_a(a, b);
 	move_smallest_to_top(a);

@@ -47,4 +47,8 @@ void    rrr(t_pile **a, t_pile **b)
     ft_reverse_rotate_pile(a);
     ft_reverse_rotate_pile(b);
     printf("rrr\n");
+    /* /printf("****CHECK****\n");
+    ft_print_stack(*a);
+    write(1, "\n", 1);
+    ft_print_stack(*b); */
 }

@@ -20,7 +20,8 @@ void	handle_upward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
 			rr(a, b);
 		while (index_a -- > 0)
 			ra(a);
-		pb(b, a);
+		write(1, "HOLB\n", 5);
+		pb(a, b);
 	}
 	else if (index_a < index_b)
 	{
@@ -28,7 +29,8 @@ void	handle_upward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
 			rr(a, b);
 		while (index_b -- > 0)
 			rb(b);
-		pb(b, a);
+		write(1, "HOLC\n", 5);
+		pb(a, b);
 	}
 }
 
@@ -40,7 +42,8 @@ void	handle_downward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
 			rrr(a, b);
 		while (index_a -- > 0)
 			rra(a);
-		pb(b, a);
+		write(1, "HOLA\n", 5);
+		pb(a, b); //MODIFICADO
 	}
 	else if (index_a < index_b)
 	{
@@ -48,7 +51,8 @@ void	handle_downward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
 			rrr(a, b);
 		while (index_b -- > 0)
 			rrb(b);
-		pb(b, a);
+		write(1, "AQUI PUTO\n", 10);
+		pb(a, b);
 	}
 }
 
@@ -79,7 +83,6 @@ void	update_piles(t_pile **a, t_pile **b)
 	update_index_updown(*b);
 	update_target(*a, *b);
 	determine_cost(*a, *b, 0, 0);
-	write(1, "UPDATE\n", 7);
 	find_cheapest(*a);
 }
 
