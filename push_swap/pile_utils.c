@@ -79,6 +79,7 @@ void	update_piles(t_pile **a, t_pile **b)
 	update_index_updown(*b);
 	update_target(*a, *b);
 	determine_cost(*a, *b, 0, 0);
+	write(1, "UPDATE\n", 7);
 	find_cheapest(*a);
 }
 

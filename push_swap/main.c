@@ -16,7 +16,6 @@ int	main(int argc, char **argv)
 {
 	t_pile	*a;
 	t_pile	*b;
-	int		len;
 
 	a = NULL;
 	b = NULL;
@@ -29,7 +28,6 @@ int	main(int argc, char **argv)
 		ft_stack_init(&a, ft_split(argv[1], ' '));
 	else
 		ft_stack_init(&a, argv + 1);
-	len = ft_stack_size(a);
 	if (ft_stack_sorted(a) == 1)
 	{
 		start_sorting(&a, &b);

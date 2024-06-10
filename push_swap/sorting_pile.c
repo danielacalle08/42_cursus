@@ -41,9 +41,10 @@ void	sort_and_return(t_pile **a, t_pile **b)
 {
 	pb(b, a);
 	pb(b, a);
-	if ((*b)->value < (*b)->next->value)
+	if ((*b) && (*b)->value < (*b)->next->value)
 		sb(b);
 	update_piles(a, b);
+	write(1, "SORT\n", 5);
 	sort_pile(a, b);
 	return_b_to_a(a, b);
 	move_smallest_to_top(a);
@@ -66,7 +67,7 @@ void	sorting_five(t_pile **a, t_pile **b, t_pile *min1, t_pile *min2)
 		rra(a);
 	pb(b, a);
 	sorting_three(a);
-	if ((*b)->value > (*b)->next->value)
+	if ((*b) && (*b)->value > (*b)->next->value)
 		pa(a, b);
 	else
 	{

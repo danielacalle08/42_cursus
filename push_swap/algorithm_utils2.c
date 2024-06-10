@@ -16,8 +16,10 @@ void	determine_cost(t_pile *a, t_pile *b, int size_a, int size_b)
 {
 	size_a = ft_stack_size(a);
 	size_b = ft_stack_size(b);
+	write(1, "COST\n", 5);
 	while (a)
 	{
+		printf("UPDOWN = %i\nTARGET UPDOWN = %p\n", a->updown, a->target);
 		if (a->updown == 1 && a->target->updown == -1)
 			a->cost = a->index + (size_b - a->target->index);
 		else if (a->updown == 1 && a->target->updown == 1)
