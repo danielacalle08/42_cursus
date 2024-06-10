@@ -36,7 +36,6 @@ int			ft_isdigit(int str);
 int			ft_atoi_long(const char *str);
 int			ft_repeated_nbr(t_pile *stack, int nbr);
 void		ft_free_pile(t_pile **stack);
-void		input_parse(char *argv, t_stack **a);
 int			ft_stack_init(t_pile **stack, char **argv);
 void		ft_print_stack(t_pile *stack);
 void	    ft_reverse_rotate_pile(t_pile **pile);

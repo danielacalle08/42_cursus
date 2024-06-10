@@ -32,13 +32,13 @@ int	ft_stack_sorted(t_pile *stack)
 	while (stack->next)
 	{
 		if (stack->value > stack->next->value)
-			return (0);
+			return (1);
 		stack = stack->next;
 	}
-	return (1);
+	return (0);
 }
 
-void	ft_free_pile_pile(t_pile **stack)
+void	ft_free_pile(t_pile **stack)
 {
 	t_pile	*tmp;
 	t_pile	*node;
