@@ -12,43 +12,39 @@
 
 #include "push_swap.h"
 
-void    ft_reverse_rotate_pile(t_pile **pile)
+void	ft_reverse_rotate_pile(t_pile **pile)
 {
-    int     len;
-    t_pile  *first;
-    t_pile  *last;
+	int		len;
+	t_pile	*first;
+	t_pile	*last;
 
-    len = ft_stack_size(*pile);
-    if (*pile == NULL || pile == NULL || len < 2)
-        return ;
-    first = *pile;
-    last = ft_stack_last(*pile);
-    last->prev->next = NULL;
-    last->next = first;
-    last->prev = NULL;
-    *pile = last;
-    first->prev = last;
+	len = ft_stack_size(*pile);
+	if (*pile == NULL || pile == NULL || len < 2)
+		return ;
+	first = *pile;
+	last = ft_stack_last(*pile);
+	last->prev->next = NULL;
+	last->next = first;
+	last->prev = NULL;
+	*pile = last;
+	first->prev = last;
 }
 
-void    rra(t_pile **a)
+void	rra(t_pile **a)
 {
-    ft_reverse_rotate_pile(a);
-    printf("rra\n");
+	ft_reverse_rotate_pile(a);
+	printf("rra\n");
 }
 
-void    rrb(t_pile **b)
+void	rrb(t_pile **b)
 {
-    ft_reverse_rotate_pile(b);
-    printf("rrb\n");
+	ft_reverse_rotate_pile(b);
+	printf("rrb\n");
 }
 
-void    rrr(t_pile **a, t_pile **b)
+void	rrr(t_pile **a, t_pile **b)
 {
-    ft_reverse_rotate_pile(a);
-    ft_reverse_rotate_pile(b);
-    printf("rrr\n");
-    /* /printf("****CHECK****\n");
-    ft_print_stack(*a);
-    write(1, "\n", 1);
-    ft_print_stack(*b); */
+	ft_reverse_rotate_pile(a);
+	ft_reverse_rotate_pile(b);
+	printf("rrr\n");
 }

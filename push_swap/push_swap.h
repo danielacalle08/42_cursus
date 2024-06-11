@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:30:01 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/05/27 18:32:16 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/06/11 21:00:51 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,26 +41,28 @@ int			ft_repeated_nbr(t_pile *stack, int nbr);
 void		ft_free_pile(t_pile **stack);
 int			ft_stack_init(t_pile **stack, char **argv);
 void		ft_print_stack(t_pile *stack);
-void	    ft_reverse_rotate_pile(t_pile **pile);
-void    	rra(t_pile **a);
-void    	rrb(t_pile **b);
-void    	rrr(t_pile **a, t_pile **b);
+void		ft_reverse_rotate_pile(t_pile **pile);
+void		rra(t_pile **a);
+void		rrb(t_pile **b);
+void		rrr(t_pile **a, t_pile **b);
 void		ft_swap_nbr(t_pile **stack);
 void		sa(t_pile **stack);
 void		sb(t_pile **stack);
 void		ss(t_pile **stack);
-void    	ft_push_pile(t_pile **src_pile, t_pile **dst_pile);
+void		ft_push_pile(t_pile **src_pile, t_pile **dst_pile);
 void		pa(t_pile **a, t_pile **b);
-void    	pb(t_pile **a, t_pile **b);
+void		pb(t_pile **a, t_pile **b);
 void		ft_rotate_pile(t_pile **pile);
-void   		ra(t_pile **a);
-void   		rb(t_pile **b);
+void		ra(t_pile **a);
+void		rb(t_pile **b);
 int			ft_stack_sorted(t_pile *stack);
-void    	rr(t_pile **a, t_pile **b);
+void		rr(t_pile **a, t_pile **b);
 void		update_index_updown(t_pile *lst);
 void		update_target(t_pile *a, t_pile *b);
-void		handle_upward_rotation(int index_a, int index_b, t_pile **a, t_pile **b);
-void		handle_downward_rotation(int index_a, int index_b, t_pile **a, t_pile **b);
+void		handle_upward_rotation(int index_a, int index_b, \
+			t_pile **a, t_pile **b);
+void		handle_downward_rotation(int index_a, int index_b, \
+			t_pile **a, t_pile **b);
 void		handle_rotation_case(t_pile **a, t_pile **b, t_pile *cheapest);
 void		update_piles(t_pile **a, t_pile **b);
 void		move_smallest_to_top(t_pile **a);
@@ -77,5 +79,7 @@ void		start_sorting(t_pile **a, t_pile **b);
 void		find_cheapest(t_pile *a);
 void		determine_cost(t_pile *a, t_pile *b, int size_a, int size_b);
 t_pile		*find_min(t_pile *lst, long min_nbr);
+int			ft_isvalid(int c);
+int			check_args(char **argv, int i, int j);
 
 #endif

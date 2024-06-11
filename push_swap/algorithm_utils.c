@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   algorithm_utils.c                                        :+:      :+:    :+:   */
+/*   algorithm_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -29,8 +29,7 @@ void	handle_opposite_rotation(t_pile **a, t_pile **b, t_pile *cheapest)
 			ra(a);
 		while (aux_b -- > 0)
 			rrb(b);
-		//write(1, "ALLÁ PUTO\n", 11);
-		pb(a, b); //MOD 3
+		pb(a, b);
 	}
 	else if (cheapest->updown == -1 && cheapest->target->updown == 1)
 	{
@@ -38,7 +37,7 @@ void	handle_opposite_rotation(t_pile **a, t_pile **b, t_pile *cheapest)
 			rra(a);
 		while (index_b -- > 0)
 			rb(b);
-		pb(b, a);
+		pb(a, b);
 	}
 }
 
@@ -77,7 +76,7 @@ t_pile	*find_max(t_pile *lst, long max_nbr)
 		if (lst->value > max && lst->value < max_nbr)
 		{
 			max = lst->value;
-            max_node = lst;
+			max_node = lst;
 		}
 		lst = lst->next;
 	}

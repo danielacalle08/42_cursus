@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pile_utils.c                                        :+:      :+:    :+:   */
+/*   pile_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 17:16:00 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/03/26 17:19:18 by dcalle-m         ###   ########.fr       */
+/*   Created: 2024/06/11 20:39:00 by dcalle-m          #+#    #+#             */
+/*   Updated: 2024/06/11 20:39:42 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	handle_upward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
 			rr(a, b);
 		while (index_a -- > 0)
 			ra(a);
-		write(1, "HOLB\n", 5);
 		pb(a, b);
 	}
 	else if (index_a < index_b)
@@ -29,12 +28,12 @@ void	handle_upward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
 			rr(a, b);
 		while (index_b -- > 0)
 			rb(b);
-		write(1, "HOLC\n", 5);
 		pb(a, b);
 	}
 }
 
-void	handle_downward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
+void	handle_downward_rotation(int index_a, int index_b, t_pile **a, \
+		t_pile **b)
 {
 	if (index_a >= index_b)
 	{
@@ -42,8 +41,7 @@ void	handle_downward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
 			rrr(a, b);
 		while (index_a -- > 0)
 			rra(a);
-		write(1, "HOLA\n", 5);
-		pb(a, b); //MODIFICADO
+		pb(a, b);
 	}
 	else if (index_a < index_b)
 	{
@@ -51,7 +49,6 @@ void	handle_downward_rotation(int index_a, int index_b, t_pile **a, t_pile **b)
 			rrr(a, b);
 		while (index_b -- > 0)
 			rrb(b);
-		write(1, "AQUI PUTO\n", 10);
 		pb(a, b);
 	}
 }

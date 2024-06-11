@@ -20,7 +20,6 @@ void	sort_pile(t_pile **a, t_pile **b)
 	len = ft_stack_size(*a);
 	while (len > 0)
 	{
-		printf("STACK A: %i\nSTACK B: %i\n", ft_stack_size(*a), ft_stack_size(*b));
 		cheapest = get_cheapest(*a);
 		if (cheapest != NULL)
 		{
@@ -58,14 +57,14 @@ void	sorting_five(t_pile **a, t_pile **b, t_pile *min1, t_pile *min2)
 		ra(a);
 	while (*a != min1 && min1->updown == -1)
 		rra(a);
-	pb(b, a);
+	pb(a, b);
 	update_index_updown(*a);
 	min2 = find_min(*a, INT_MIN);
 	while (*a != min2 && min2->updown == 1)
 		ra(a);
 	while (*a != min2 && min2->updown == -1)
 		rra(a);
-	pb(b, a);
+	pb(a, b);
 	sorting_three(a);
 	if ((*b) && (*b)->value > (*b)->next->value)
 		pa(a, b);
