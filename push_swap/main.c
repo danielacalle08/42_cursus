@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 18:00:11 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/06/11 21:02:28 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/06/12 16:44:00 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,7 @@ int	main(int argc, char **argv)
 	else
 		ft_stack_init(&a, argv + 1);
 	if (ft_stack_sorted(a) == 1)
-	{
 		start_sorting(&a, &b);
-	}
 	ft_free_pile(&a);
 	return (0);
 }
