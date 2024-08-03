@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 17:21:57 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/07/31 20:12:45 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/08/03 16:40:02 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	main(int ac, char **av)
 		return (printf("You must put 4 or 5 arguments!\n"), 3);
 	else if (ft_atoi(av[1]) > MAX_PHILO)
 		return (printf("Too many philosophers"), 4);
+	else if (check_input(av) == 3)
+		return (printf("Empty argument"), 5);
 	init_data(av, &data);
 	init_philosophers(av[1], philo, &data, forks);
 	create_threads(philo, -1);

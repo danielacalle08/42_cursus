@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 17:21:49 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/07/31 20:18:45 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/08/03 17:01:39 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ size_t	get_current_time(void)
 	return (time.tv_sec * 1000 + time.tv_usec / 1000);
 }
 
-void	print_info(char *str, t_philo *philosopher)
+void	print_info(const char *color_code, char *str, t_philo *philosopher)
 {
 	size_t	time;
 
 	pthread_mutex_lock(&philosopher->data->lock_write);
 	time = get_current_time() - philosopher->start_time;
 	if (!check_dead(philosopher))
-		printf("%zu %d %s\n", time, philosopher->id, str);
+		printf("%s%zu %d %s\n", color_code, time, philosopher->id, str);
 	pthread_mutex_unlock(&philosopher->data->lock_write);
 }
 
@@ -75,10 +75,12 @@ int	check_input(char **av)
 	i = 1;
 	while (av[i])
 	{
+		if (av[i][0] == '\0')
+			return (3);
 		j = 0;
-		while (av[i][j])
+		while (av[i][j] != '\0')
 		{
-			if (av[i][j] == '-')
+			if (!av[i][j] || av[i][j] == '-')
 				return (1);
 			if (av[i][j] < '0' || av[i][j] > '9')
 				return (2);

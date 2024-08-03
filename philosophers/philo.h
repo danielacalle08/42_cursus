@@ -6,7 +6,7 @@
 /*   By: dcalle-m <dcalle-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 17:21:53 by dcalle-m          #+#    #+#             */
-/*   Updated: 2024/07/31 20:06:56 by dcalle-m         ###   ########.fr       */
+/*   Updated: 2024/08/03 17:03:58 by dcalle-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 # include <unistd.h>
 
 # define MAX_PHILO 800
+# define COLOR_RED     "\033[31m"
+# define COLOR_GREEN   "\033[32m"
+# define COLOR_WHITE   "\033[37m"
 
 typedef struct s_philo
 {
@@ -58,7 +61,7 @@ void	set_start(t_philo *philosopher);
 void	set_dead(t_philo *philosopher);
 int		check_dead(t_philo *philosopher);
 size_t	get_current_time(void);
-void	print_info(char *str, t_philo *philosopher);
+void	print_info(const char *color_code, char *str, t_philo *philosopher);
 void	ft_usleep(size_t milliseconds);
 void	eat_routine(t_philo *philosopher);
 void	*routine(void *arg);
